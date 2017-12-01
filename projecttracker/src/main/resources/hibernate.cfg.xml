@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+    <!-- a SessionFactory instance listed as /jndi/name -->
+    <session-factory>
+
+        <!-- properties -->
+        <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+        <property name="show_sql">true</property>
+        <property name="hbm2ddl.auto">update</property>
+        
+        <!-- mapping files -->
+        <mapping class="com.projecttracker.model.User"/>
+        <mapping class="com.projecttracker.model.Comment"/>
+        <mapping class="com.projecttracker.model.File"/>
+        <mapping class="com.projecttracker.model.Project"/>
+        <mapping class="com.projecttracker.model.Task"/>
+
+    </session-factory>
+
+</hibernate-configuration>
